@@ -1,0 +1,27 @@
+body { 
+    margin: 0
+}
+    .bg-nephritis {
+      background: #214ce9;
+    }
+    .fg-white {
+      color: #000000;
+    }
+    
+    .with-before:before {
+      content: "---";
+    }
+    
+    .with-after:after {
+      content: "***";
+    }
+    
+    .test-first-letter:first-letter {
+      font-size: 1.2em;
+      color: #599;
+    }
+    
+    .test-first-line:first-line {
+      font-size: 1.2em;
+      color: #559;
+    }
