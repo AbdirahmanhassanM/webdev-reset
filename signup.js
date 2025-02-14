@@ -1,36 +1,27 @@
-export function singin(evnt) {
-    
-}
-const formEl = document.querySelector('form')
-const usernameEl = document.querySelector('#Username')
-const passwordEl = document.querySelector('#Password')
-
-function onsubmit(event) {
+export function SignUp(event){
     event.preventDefault()
-    console.log(usernameEl.value)
-
-    const username = usernameEl.value
-    const password = passwordEl.value
+    const username  = usernameEl.value
+    const email  = emailEl.value
+    const password  = passwordEl.value
 
     const data = {
-        username, 
-        email,
-        password,
+        // propertyName : 'property value'
+        username : username,
+        email : email,
+        password : password,
     }
 
-    fetch('/api/token', {
+    fetch('/api/user',{
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
+        headers:{
+            'Content-Type' : 'application/json'
         },
-        body: JSON.stringify(data),
-    }).then((res) => {
+        body : JSON.stringify(data)
+    }).then((res)=> {
         return res.text()
-    }).then ((text) => {
-        console.log(text)
-    }).catch(function (error) {
-        console.log('Promise rejected with: ', error)
+    }).then((res)=>{
+        console.log(res)
+    }).catch(function(error){
+        console.log('Promise rejected with :', error)
     })
 }
-
-formEl.addEventListener('submit', onsubmit)

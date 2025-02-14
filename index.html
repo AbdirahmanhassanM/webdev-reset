@@ -1,41 +1,58 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up form</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="src/main.css">
 </head>
-<body class="bg-nephritis fr-white"> 
+<body class = " bg-nephritis fg-white">
+    <div id = app></div>
     <header>
-    <h1>
-        Welcome to the "Name of your app"
-    </h1>
-   </header>
-   <main>
-         <header>
-            Sing up
-            <a href="signin.html">Sign in</a>
-         </header>
-         <form method="post">
+        <h1>
+            Welcome to the "YeahYeah App"
+        </h1>
+    </header>
+    <main>
+        <header>
+            <label for="singup-radio">Sign Up</label>
+            <input type="radio" value="signup" name="formType" id="singup-radio">
+            <label for="login-radio">Log In</label>
+            <input type="radio" value="login" name="formType" id="login-radio">
+        </header>
+        <form id = 'signup'>
             <fieldset>
-                <legend class="with-before">Please fill in the form</legend>
+                <legend class="with-before">Please fill in the email</legend>
                 <div>
                     <label for="username">username</label>
-                    <input name="username" type="username" id="username" required>
+                    <input name= "username" type="text" id="username" required>
                 </div>
                 <div>
                     <label for="email">email</label>
-                    <input name="email" type="Email" id="email" required>    
+                    <input name= "email" type="email" id="email" required>
                 </div>
                 <div>
                     <label for="password">password</label>
-                    <input name="password" type="password" id="password" required>
+                    <input name= "password" type="password" id="password" required>
                 </div>
-                <button type ="submit">Sign up</button> 
+                <button type="submit">Sign Up</button>
             </fieldset>
-         </form>
-   </main>
-   <script src="main.js" module></script>
+        </form>
+        <form id="login" style="display :none;">
+            <fieldset>
+                <legend class="with-before">Please authentificate</legend>
+                <div>
+                    <label for="username">Username or email</label>
+                    <input name= "username" type="text" id="username" required>
+                </div>
+                <div>
+                    <label for="password">password</label>
+                    <input name= "password" type="password" id="password" required>
+                </div>
+                <button type="submit">Log In</button>
+            </fieldset>
+        </form>
+    </main>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
