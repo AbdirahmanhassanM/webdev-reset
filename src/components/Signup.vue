@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <div class="flex flex-col items-center justify-center min-h-screen bg-orange-50">
     <div class="w-full max-w-md p-8 space-y-3 rounded-xl bg-white shadow-lg">
-      <h1 class="text-2xl font-bold text-center">Sign Up</h1>
+      <h1 class="text-2xl font-bold text-center text-gray-900">Sign Up</h1>
       <form class="space-y-6" @submit.prevent="handleSubmit">
         <div class="space-y-2">
           <label for="username" class="text-sm font-medium text-gray-700">Username</label>
@@ -10,7 +10,7 @@
             v-model="username"
             type="text"
             required
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
         </div>
         <div class="space-y-2">
@@ -20,7 +20,7 @@
             v-model="email"
             type="email"
             required
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
         </div>
         <div class="space-y-2">
@@ -30,14 +30,14 @@
             v-model="password"
             type="password"
             required
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
         </div>
-        <button type="submit" class="btn w-full">Sign Up</button>
+        <button type="submit" class="w-full px-4 py-2 text-white bg-orange-400 rounded-lg hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">Sign Up</button>
       </form>
       <p class="text-center text-sm text-gray-600 mt-4">
         Already have an account?
-        <router-link to="/signin" class="text-primary hover:underline">Sign In</router-link>
+        <router-link to="/signin" class="text-orange-500 hover:underline">Sign In</router-link>
       </p>
     </div>
   </div>

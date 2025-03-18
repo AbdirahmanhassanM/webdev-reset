@@ -3,56 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up form</title>
-    <link rel="stylesheet" href="src/main.css">
+    <title>Abdirahman's Website</title>
 </head>
-<body class = " bg-nephritis fg-white">
-    <div id = app></div>
-    <header>
-        <h1>
-            Welcome to the "YeahYeah App"
-        </h1>
-    </header>
-    <main>
-        <header>
-            <label for="singup-radio">Sign Up</label>
-            <input type="radio" value="signup" name="formType" id="singup-radio">
-            <label for="login-radio">Log In</label>
-            <input type="radio" value="login" name="formType" id="login-radio">
-        </header>
-        <form id = 'signup'>
-            <fieldset>
-                <legend class="with-before">Please fill in the email</legend>
-                <div>
-                    <label for="username">username</label>
-                    <input name= "username" type="text" id="username" required>
-                </div>
-                <div>
-                    <label for="email">email</label>
-                    <input name= "email" type="email" id="email" required>
-                </div>
-                <div>
-                    <label for="password">password</label>
-                    <input name= "password" type="password" id="password" required>
-                </div>
-                <button type="submit">Sign Up</button>
-            </fieldset>
-        </form>
-        <form id="login" style="display :none;">
-            <fieldset>
-                <legend class="with-before">Please authentificate</legend>
-                <div>
-                    <label for="username">Username or email</label>
-                    <input name= "username" type="text" id="username" required>
-                </div>
-                <div>
-                    <label for="password">password</label>
-                    <input name= "password" type="password" id="password" required>
-                </div>
-                <button type="submit">Log In</button>
-            </fieldset>
-        </form>
-    </main>
+<body>
+    <div id="app"></div>
     <script src="/src/main.js" type="module"></script>
 </body>
 </html>
