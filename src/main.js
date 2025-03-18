@@ -1,13 +1,9 @@
-import { signUp } from "./signup.js"
-import { signIn } from "./signin.js"
-import SignUp from './components/SignUp.vue';
-import SignIn from './components/SignIn.vue';
-import App from './App.vue'
-
 import { createRouter, createWebHistory } from "vue-router"
-import { ref, computed, createApp } from 'vue'
+import { createApp } from 'vue'
+import SignUp from './components/SignUp.vue'
+import SignIn from './components/SignIn.vue'
+import App from './App.vue'
 import 'uno.css'
-import '@una-ui/preset/una.css'
 
 const routes = [
   {
