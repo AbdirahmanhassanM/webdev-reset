@@ -1,4 +1,4 @@
-import { signUp } from './signup.js'
+import { signUp } from './src/signup.js'
 
 
 const signupEl = document.querySelector('#singup')

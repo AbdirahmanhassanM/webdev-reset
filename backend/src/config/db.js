@@ -1,4 +1,4 @@
 import mongoose from 'mongoose'
 
-export fucntion connect(){ 
+export function connect(){ 
     return mongoose.connect(process.env.MONGODB_URI)}
