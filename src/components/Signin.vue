@@ -1,34 +1,46 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen bg-orange-50">
-    <div class="w-full max-w-md p-8 space-y-3 rounded-xl bg-white shadow-lg">
-      <h1 class="text-2xl font-bold text-center text-gray-900">Sign In</h1>
+  <div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-orange-50 to-orange-100">
+    <div class="w-full max-w-md p-10 space-y-8 bg-white rounded-xl shadow-lg">
+      <div class="text-center">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">Sign In</h1>
+      </div>
+
       <form class="space-y-6" @submit.prevent="handleSubmit">
-        <div class="space-y-2">
-          <label for="email" class="text-sm font-medium text-gray-700">Email</label>
-          <input
-            id="email"
-            v-model="email"
-            type="email"
-            required
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
-          />
+        <div class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <div class="relative">
+              <input
+                id="email"
+                v-model="email"
+                type="email"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-colors"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <div class="relative">
+              <input
+                id="password"
+                v-model="password"
+                type="password"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-colors"
+              />
+            </div>
+          </div>
         </div>
-        <div class="space-y-2">
-          <label for="password" class="text-sm font-medium text-gray-700">Password</label>
-          <input
-            id="password"
-            v-model="password"
-            type="password"
-            required
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
-          />
-        </div>
-        <button type="submit" class="w-full px-4 py-2 text-white bg-orange-400 rounded-lg hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">Sign In</button>
+
+        <button
+          type="submit"
+          class="w-full flex justify-center py-3.5 px-4 mt-8 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-colors"
+        >
+          Sign In
+        </button>
       </form>
-      <p class="text-center text-sm text-gray-600 mt-4">
-        Don't have an account?
-        <router-link to="/signup" class="text-orange-500 hover:underline">Sign Up</router-link>
-      </p>
     </div>
   </div>
 </template>
